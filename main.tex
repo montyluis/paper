@@ -1,0 +1,411 @@
+\documentclass[table,usenames,dvipsnames,number=9 %your number in series
+                ,series=renal, %series abbreviation
+                ,isbn=978-607-8432-13-4, %add your isbn here
+                ,url=http://www.uatx.edu/, %change for your book
+	            ,output=long % long|short|inprep
+	            %,blackandwhite
+	            %,smallfont
+	            %,draftmode
+		     ]{langsciold}
+                  %]{langscinew}
+                  %  ]{langsci}
+%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   additional packages  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% put all additional commands you need in the
+% following files. If you do not know what this might
+% mean, you can safely ignore this section
+%\usepackage[spanish]{babel}
+%\usepackage[final]{microtype}
+%\usepackage[activate={true,nocompatibility}
+%,final
+%,tracking=true
+%,kerning=true
+%,spacing=true
+%,factor=1100
+%,stretch=10
+%,shrink=10]{microtype}
+\usepackage{localmetadata}
+\usepackage{localpackages}
+\usepackage{localhyphenation}
+\usepackage{localcommands}
+%\usepackage[letter,cam,center]{crop}
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\setotherlanguages{english}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\newtheorem{theorem}{Theorem}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+\newcommand\textstyleInternetLink[1]{{\textcolor{blue}{#1}}}
+\newcommand\textstyleVisitedInternetLink[1]{{\textcolor[rgb]{0.5019608,0.0,0.0}{#1}}}
+%\DisemulatePackage{setspace}
+\usepackage{setspace}
+%%%\singlespacing
+%%\onehalfspacing
+%\doublespacing
+%%\setstretch{1.15}
+\linespread{1.25}
+\usepackage{hyphenat}
+\usepackage[shortcuts]{extdash}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{tabu, longtable}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{rotating}
+%\usepackage{slashbox}
+\usepackage{url}
+\usepackage{wallpaper}
+\usepackage{supertabular}
+\usepackage{tocloft}
+%\usepackage{caption}
+%\captionsetup[table]{name=Cuadro}
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage{titlesec, blindtext, color}
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage[]{tocbibind}
+\usepackage{etoolbox}
+\usepackage{fontspec}
+%%%\setmainfont{Linux Libertine O}
+\newfontfamily\quotefont{Linux Biolinum O}
+%%\newfontfamily\quotefont{GillSansMTPro-Book}
+\AtBeginEnvironment{quote}{\quotefont\small}
+\AtBeginEnvironment{quotation}{\quotefont\small}
+
+%\usepackage{tocloft} 
+%\usepackage[subfigure]{tocloft}
+%\usepackage[]{tocbibind}
+%\usepackage{tocloft}
+%\usepackage{fancyhdr}
+\renewcommand{\cftdot}{} % remove dots of table of content
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries\MakeUppercase} % change toc title to upper case
+\renewcommand{\cftaftertoctitle}{\hfill}
+%\renewcommand{\cftchapfont}{\MakeUppercase} % change chapter headings to uppercase
+%\renewcommand{\cftchappresnum}{CAP.} % try to put "Chapter" in front of e.g."1. Introduction"
+%\renewcommand{\cfttoctitlefont}{\hfil\bf} 
+\titleformat{\chapter}[hang]{\centering\normalfont\large\bfseries}{}{0pt}{\large} % \scshape ?
+\renewcommand\thesection{\arabic{section}}
+\setlength{\cftchapnumwidth}{0pt}
+\renewcommand\thechapter{}
+\titlespacing*{\chapter}{11pt}{0pt}{11pt}
+
+\parindent0em
+
+%\makeatletter
+%\renewcommand*\l@section{\bprot@dottedtocline{1}{0em}{2.3em}}% no indentation
+%\renewcommand{\@pnumwidth}{3em}
+%\renewcommand{\@tocrmarg}{4em}
+%\makeatother
+%\usepackage[tocbreaksstrict,tocflat]{tocstyle}
+%\usetocstyle{standard}
+%\settocfeature{raggedhook}{\raggedright}
+%\makeatletter
+%\renewcommand{\@pnumwidth}{3em}
+%\renewcommand{\@tocrmarg}{4em}
+%\makeatother
+% \KOMAoptions{toc=flat} 
+%\setcounter{secnumdepth}{0}
+%\selecttocstyleoption{tocflat}
+%\usepackage{blindtext}
+%\pagestyle{fancy}
+%%\usepackage{tocstyle}
+%%\settocfeature{leaders}{\ \leaders\hrule\hfill}
+\usepackage{epigraph}
+%\usepackage{lmodern}
+%\setlength\tabcolsep{1mm}
+%%%\usepackage{booktabs}
+\usepackage{enumitem}
+% % % % % % % % % % % % % 
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\newlist{Obs}{description}{1}
+\setlist[Obs]{labelindent=0.1\parindent,leftmargin=0.1\parindent}
+
+%%\addto\captionsenglish{%
+%%	\renewcommand\tablename{Cuadro}
+%%}
+%%
+%%\AtBeginDocument{%
+%%	\renewcommand\tablename{Cuadro}
+%%}
+
+\hyphenation{Estado ciernes épo-cas res-ca-te Ca-ta-lo-ga-ción en-se-ñan-za-apren-di-za-je}
+
+%\includeonly{chapters/p1.tex}
+%\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{fontspec,lineno}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont{GaramondPremrPro}
+%%\setsansfont{Adobe Garamond Pro}%{GillSansMTPro-Light}
+%set the font size and leading
+%\renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
+%\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Path=\fontpath,Mapping=tex-text,Scale=MatchLowercase,Style=TitlingCaps,Ligatures={NoRequired,NoCommon,NoContextual},PunctuationSpace=0,Numbers={OldStyle,Lining},Scale=1.0]
+{GillSansMTPro-Book}
+\defaultfontfeatures{Ligatures=TeX}
+\newfontfamily{\liningmainfont}[Path=\fontpath,Numbers={OldStyle,Lining},Ligatures=TeX,Scale=MatchLowercase,Scale=0.8]{Book_Antiqua}
+\newcommand*{\footnotemarkcolor}{lsRed}
+\makeatletter
+\renewcommand{\@makefnmark}{%
+  \noindent
+  \makebox[5pt][r]{\@textsuperscript{\color{\footnotemarkcolor}\normalfont\liningmainfont\@thefnmark}}%
+}
+%s\def\splitfootnoterule{\kern-3\p@ \hrule width 8cm \kern2.6\p@}
+\makeatother
+\renewcommand{\footnoterule}{\vspace*{-4pt}
+  \noindent\rule{2.25in}{1pt}\vspace*{2pt}}
+%\setmainfont[Mapping=tex-text,Style=TitlingCaps,Ligatures={Common}]{Garamond Premier Pro}
+%\defaultfontfeatures{Renderer=Basic,Ligatures=TeX}
+%\setmathsfont(Digits,Latin,Greek){GillSansMTPro-Light}
+%\setmainfont{Adobe Garamond Pro}
+%\setmainfont{Mapping=tex-text}{GillSansMTPro-Book}
+%\setmainfont{Calibri}
+%\setmainfont{ClarendonLTStd}
+%\setmainfont[%Ligatures={TeX,Common},
+        %PunctuationSpace=0,
+        %Numbers={Monospaced,Lining}%,
+       %\addfontfeatures{Numbers={Monospaced,Lining}} 
+        %Numbers={Proportional},	
+%            ]{GillSansMTPro}
+%\usepackage{arev}
+%\usepackage[scaled]{berasans}
+%\renewcommand*\familydefault{\sfdefault}  %%  to be sans serif
+%\usepackage[T1]{fontenc}
+%\def\Tiny{ \font\Tinyfont = cmr10 at 3pt \relax  \Tinyfont}
+%\usepackage{hyperref}
+\pdfpagewidth=216 true mm
+\pdfpageheight=279 true mm
+%\setlength{\headheight}{1.5\baselineskip}
+\usepackage{multirow}
+\usepackage{bigstrut}
+%\usepackage{microtype}
+%\DisableLigatures[f]{encoding = *, family = * }
+\usepackage[hang,flushmargin,splitrule,multiple]{footmisc}% http://ctan.org/pkg/footmisc
+\usepackage{relsize}% http://ctan.org/pkg/relsize
+\renewcommand\footnotelayout{\footnotesize}
+\renewcommand{\thefootnote}{\small\arabic{footnote}}%
+%\makeatletter
+%\renewcommand\@makefntext[1]{\leftskip=2em\hskip-2em\@makefnmark#1}
+%\makeatother
+%%\usepackage{scrextend}
+%%\deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+%\renewcommand{\footnotemargin}{1em}
+%\newcommand{\fn}[1]{\footnote{\hangpara{3em}{1} #1}}
+\renewcommand{\hangfootparindent}{1.5em}% Indentation for 2nd etc. paragraphs in footnotes which cosists of more than one paragraph
+\renewcommand{\hangfootparskip}{3pt}% Vertical space between paragraphs in multiparagraph footnotes
+\renewcommand{\footnotemargin}{0.00001pt}% Setting left margin; this is the smallest value I can get to have second etc. lines indented to footnote number; zero put indentation to some positive value, and negative values do not help actually
+\renewcommand{\footnotelayout}{\hspace{1.5em}}% Here you can modify the spacing between the footnote number and the text of footnote; keep this value and \hangfootparindent value the same
+%\usepackage{fixltx2e}
+%\renewcommand{\allcapsspacing}[1]{{\addfontfeature{LetterSpace=20.0}#1}}
+%\renewcommand{\smallcapsspacing}[1]{{\addfontfeature{LetterSpace=5.0}#1}}
+%\renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
+%\renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
+%\renewcommand{\rmdefault}{pplx}
+%
+%\XeTeXinterchartokenstate=1
+%\chardef\CharNormal=0
+%\chardef\CharBound=255
+%\newXeTeXintercharclass\CharNumbers
+%\XeTeXcharclass`0=\CharNumbers
+%\XeTeXcharclass`1=\CharNumbers
+%\XeTeXcharclass`2=\CharNumbers
+%\XeTeXcharclass`3=\CharNumbers
+%\XeTeXcharclass`4=\CharNumbers
+%\XeTeXcharclass`5=\CharNumbers
+%\XeTeXcharclass`6=\CharNumbers
+%\XeTeXcharclass`7=\CharNumbers
+%\XeTeXcharclass`8=\CharNumbers
+%\XeTeXcharclass`9=\CharNumbers
+%\newtoks\TokSetfont
+%\TokSetfont={\begingroup\fontspec{\XeTeXinterchartokenstate=1
+%\chardef\CharNormal=0
+%\chardef\CharBound=255
+%\newXeTeXintercharclass\CharNumbers
+%\XeTeXcharclass`0=\CharNumbers
+%\XeTeXcharclass`1=\CharNumbers
+%\XeTeXcharclass`2=\CharNumbers
+%\XeTeXcharclass`3=\CharNumbers
+%\XeTeXcharclass`4=\CharNumbers
+%\XeTeXcharclass`5=\CharNumbers
+%\XeTeXcharclass`6=\CharNumbers
+%\XeTeXcharclass`7=\CharNumbers
+%\XeTeXcharclass`8=\CharNumbers
+%\XeTeXcharclass`9=\CharNumbers
+%\newtoks\TokSetfont
+%\TokSetfont={\begingroup\fontspec{Latin Modern Mono}}
+%\XeTeXinterchartoks\CharNormal\CharNumbers=\TokSetfont
+%\XeTeXinterchartoks\CharBound\CharNumbers=\TokSetfont
+%\XeTeXinterchartoks\CharNumbers\CharNormal={\endgroup}
+%\XeTeXinterchartoks\CharNumbers\CharBound={\endgroup}}}
+%\XeTeXinterchartoks\CharNormal\CharNumbers=\TokSetfont
+%\XeTeXinterchartoks\CharBound\CharNumbers=\TokSetfont
+%\XeTeXinterchartoks\CharNumbers\CharNormal={\endgroup}
+%\XeTeXinterchartoks\CharNumbers\CharBound={\endgroup}
+\newcommand{\lnt}[1]%
+           {{\addfontfeatures{Numbers={Monospaced,Lining}}#1}}
+\usepackage{tabulary}
+\usepackage{textcomp}
+%\usepackage[osf]{libertine}
+%\usepackage{amsmath, amsthm}
+%\usepackage[cmintegrals, cmbraces, libertine]{newtxmath}
+%\usepackage[version=3]{mhchem}
+\usepackage{amsmath} % must precede mathspec
+%\usepackage[MnSymbol]{mathspec}
+\usepackage{gillsans}
+\usepackage[   %% --- EulerVM (MATH)
+  small,       %for smaller Fonts
+ euler-digits % digits in euler fonts style
+]{eulervm}
+%\usepackage{xtab}
+%\renewcommand{\rmdefault}{pmnj}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{framed}
+\usepackage{calc}
+\usepackage[autostyle=true,babel,spanish=spanish,english=american,french=guillemets]{csquotes}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+%\usepackage{color}
+%\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{hhline}
+%\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+%\usepackage[lining]{ebgaramond}
+%\usepackage{parskip}
+\addtokomafont{disposition}{\rmfamily}
+%%\setmonofont{LucidaSansTypewriterStd}
+%%\setsansfont{GillSansMT}
+\setlength{\headheight}{1.1\baselineskip}
+\usepackage{pdfpages}
+\usepackage{shapepar}
+\usepackage{fixltx2e}
+%\oldstylenums{1234567890}
+%\renewcommand{\linenumberfont}{\scriptsize\addfontfeatures{Numbers={Lining, Monospaced}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             BEGIN DOCUMENT                   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\clearpage\setcounter{page}{9}
+\pagenumbering{roman}
+%\includepdf[pages={1}]{portada.pdf}
+%\include{PagLegal}
+\markboth{}{}
+\thispagestyle{empty}
+\maketitle
+\frontmatter
+%
+\clearpage\setcounter{page}{7}
+% %% uncomment if you have preface and/or acknowledgements
+%\chapter*{Preface}
+% \include{chapters/preface}
+% \section*{Acknowledgements}
+% \include{chapters/acknowledgements} 
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} 
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdot}{$\ldots$}
+\renewcommand{\contentsname}{Índice} % change "Contents" to "ÍNDICE"
+\titlepage
+\addtocontents{toc}{\bfseries {\,} \hfill Pág.\par} % add underlined "Chapter" and "page" before actually contents show up.
+\newcommand*\NewPage{\newpage\null\thispagestyle{empty}\newpage}
+%\renewcommand{\headrulewidth}{2pt}
+%\renewcommand{\cftdot}{}
+%%\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries\sffamily}
+%%\renewcommand{\cftaftertoctitle}{\hfill}
+%%\renewcommand{\cftaftertoctitleskip}{2.5cm}
+%%\renewcommand{\cftbeforetoctitleskip}{2.5cm}
+%%\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries\sffamily}
+%%\renewcommand{\cftafterloftitle}{\hfill \hfill
+%\renewcommand{\cftafterloftitle}{\hfill \hfill \hfill
+%%\\[3\baselineskip]{Figure No \hfill Title \hfill Page \linebreak} \vskip-50pt}
+%%\renewcommand{\cftbeforeloftitleskip}{2.5cm}
+%%\renewcommand{\cftlottitlefont}{\hfill\Large\bfseries\sffamily}
+%%\renewcommand{\cftafterlottitle}{\hfill \hfill
+%\renewcommand{\cftafterlottitle}{\hfill \hfill\hfill
+%%\\[3\baselineskip]{Table No \hfill Title \hfill Page \linebreak }
+%%\vskip-50pt}
+%%\renewcommand{\cftbeforelottitleskip}{2.5cm}
+%%\newlistof{appendices}{loa}{List of Appendices}
+%%\renewcommand{\cftloatitlefont}{\hfill\Large\bfseries\sffamily}
+%%\renewcommand{\cftafterloatitle}{\hfill \hfill
+%\renewcommand{\cftafterloatitle}{\hfill \hfill\hfill
+%%\\[3\baselineskip]{Appendix \hfill Title \hfill Page \linebreak}
+%%\vskip-60pt}
+%%\renewcommand{\cftbeforeloatitleskip}{2.5cm}
+%%\renewcommand{\cftchappresnum}{Chapter }
+%%\renewcommand{\cftchapaftersnum}{}
+%%\renewcommand{\cftchapaftersnumb}{\qquad\quad\,\,}
+%%\renewcommand{\cftsecpresnum}{\qquad\quad\,\,\,\, }
+%%\renewcommand{\cftsubsecpresnum}{\quad\,\, }
+%%\renewcommand{\cftsecaftersnum}{}
+%%\renewcommand{\cftsecaftersnumb}{\qquad\qquad\,}
+%%\renewcommand{\cftsubsecaftersnumb}{\quad}
+% % % % % % % % % % % % % % % % % % % % % % %
+
+\tableofcontents %
+
+%\hrulefill %
+
+\mainmatter %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Chapters                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/i1}% 
+%%\include{chapters/i2}% 
+\include{chapters/p1}%
+%%\include{chapters/p2}%
+\include{chapters/p3}%
+%%\include{chapters/p4}% 
+\include{chapters/p5}%
+%%\end{document}
+%%\include{chapters/p6}%
+\include{chapters/p7}%
+%%\include{chapters/p8}% 
+\include{chapters/p9}%
+%%\include{chapters/p10}%
+\include{chapters/p11}%
+%%\include{chapters/p12}%
+\include{chapters/p13}%
+%%\include{chapters/p14}%
+\include{chapters/p15}%
+%%\include{chapters/p16}% 
+\include{chapters/p17}%
+%%\include{chapters/p18}%
+\include{chapters/p19}%
+%%\include{chapters/p20}%
+\include{chapters/t1}%
+%%\include{chapters/p21}%
+\include{chapters/p22}%
+%%\include{chapters/p23}
+\include{chapters/p25}
+%%\include{chapters/p24}
+\include{chapters/c1}
+%%%%%%%%%%
+%\include{chapters/p27}
+%\include{chapters/p28}%
+%\include{chapters/a1}
+%\include{SalaP}
+%\include{LataP}
+%%\backmatter
+%%\bibliography{biblios}
+%\includepdf[pages={1}]{portada.pdf}
+\end{document}

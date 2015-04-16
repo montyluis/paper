@@ -1,0 +1,32 @@
+% -----------------------------------------------------------------
+% Filename: gillsans.sty ( Humanist 521 )
+% Created by: tex bgs
+% Created using fontinst v1.335
+% Created for [4allTeX postscript font setup]
+% Created on [1996/05/06]
+% Use phbfonti.sty file (in 4allTeX package)
+% Based on PSNFSS 2.4.1 and 3.x by S. Rahtz
+% Put this file in a TEXINPUT directory.
+% -----------------------------------------------------------------
+% Can be processed by LaTeX209 and LaTeX2e
+\def\fileversion{3q}
+\def\filedate{94/10/22}
+\def\docdate{94/10/22}
+\ifx\ProvidesPackage\undefined
+\immediate\write\sixt@@n{File: gillsans.sty NFSS1 fontinst (PhB)}
+\ifx\selectfont\undefined
+\@latexerr{No NFSS1 detected...}\@eha\endinput\fi
+
+\ifx\declare@font\undefined\input{psnfss.sup}\fi
+\def\load@bgs{\postscript@fontdef{Humanist 521 }{bgs}%
+  {bgsr}{bgsri}{bgsb}{bgsbi}{bgsrc}{bgsro}}
+\late@extra@def{bgs}{}{}
+\load@bgs
+\else
+\immediate\write\sixt@@n{File: gillsans.sty LaTeX2e fontinst (PhB)}
+\ProvidesPackage{gillsans}[\filedate\space\fileversion\space
+ LaTeX2e fontinst (PhB)]\fi
+
+\def\sfdefault{bgs}
+\def\switchfont{\def\sfdefault{\rmdefault}\def\rmdefault{bgs}}
+\endinput
