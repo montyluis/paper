@@ -85,11 +85,7 @@
 \usepackage{etoolbox}
 \usepackage{fontspec}
 %%%\setmainfont{Linux Libertine O}
-\newfontfamily\quotefont{Linux Biolinum O}
-%%\newfontfamily\quotefont{GillSansMTPro-Book}
-\AtBeginEnvironment{quote}{\quotefont\small}
-\AtBeginEnvironment{quotation}{\quotefont\small}
-
+%%\newfontfamily\quotefont{Linux Biolinum O}
 %\usepackage{tocloft} 
 %\usepackage[subfigure]{tocloft}
 %\usepackage[]{tocbibind}
@@ -189,6 +185,9 @@
 %\usepackage[T1]{fontenc}
 %\def\Tiny{ \font\Tinyfont = cmr10 at 3pt \relax  \Tinyfont}
 %\usepackage{hyperref}
+\newfontfamily\quotefont[Path=\fontpath,Mapping=tex-text,Scale=MatchLowercase,Style=TitlingCaps,Ligatures={NoRequired,NoCommon,NoContextual},PunctuationSpace=0,Numbers={OldStyle,Lining},Scale=1.0]{GillSansMTPro-Book}
+\AtBeginEnvironment{quote}{\quotefont\small}
+\AtBeginEnvironment{quotation}{\quotefont\small}
 \pdfpagewidth=216 true mm
 \pdfpageheight=279 true mm
 %\setlength{\headheight}{1.5\baselineskip}
@@ -289,8 +288,8 @@
 %\usepackage[lining]{ebgaramond}
 %\usepackage{parskip}
 \addtokomafont{disposition}{\rmfamily}
-%%\setmonofont{LucidaSansTypewriterStd}
-%%\setsansfont{GillSansMT}
+\setmonofont[Path=\fontpath,Scale=1.0]{LucidaSansTypewriterStd}
+\setsansfont[Path=\fontpath,Scale=1.0]{GillSansMT}
 \setlength{\headheight}{1.1\baselineskip}
 \usepackage{pdfpages}
 \usepackage{shapepar}
